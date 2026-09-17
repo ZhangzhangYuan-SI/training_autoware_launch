@@ -11,7 +11,7 @@
    <param name="input_topic" value="$(var input_lidar_topic_name)"/>
    <param name="output_topic" value="$(var output_concatenated_topic_name)"/>
    <param name="type" value="sensor_msgs/msg/PointCloud2"/>
-   <param name="reliability" value="best_eﬀort"/>
+   <param name="reliability" value="best_effort"/>
   </node>
 
   <group>
@@ -37,8 +37,8 @@
       <arg name="use_intra_process" value="true"/>
       <arg name="use_multithread" value="true"/>
       <arg name="pointcloud_container_name" value="$(var pointcloud_container_name)"/>
-      <!--<arg name="use_concat_ﬁlter" value="$(var use_concat_ﬁlter)"/>-->
-      <arg name="use_concat_ﬁlter" value="false"/>
+      <arg name="use_concat_filter" value="$(var use_concat_filter)"/>
+      <!--<arg name="use_concat_ﬁlter" value="false"/>-->
     </include>
   </group>
 </launch>
